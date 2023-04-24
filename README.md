@@ -1,16 +1,9 @@
 # zapit
 
-A new Flutter project.
+Steps involved in completion of this assignment
 
-## Getting Started
+1. A basic ui is created using flutter widgets.
+2. A repository was created to fetch data from Alpha Vintage API. This app fetches Daily data of crypto currency,
+3. The code for Bloc (event and states) can be found in "lib/Blocs" directory.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
