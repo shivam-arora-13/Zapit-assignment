@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zapit/Assets/crypto_currency_list.dart';
 
 import 'package:zapit/Screens/crypto_info_screen.dart';
 
@@ -19,19 +20,22 @@ class _HomeScreenState extends State<HomeScreen> {
         title: const Text("Zapit"),
       ),
       body: ListView.builder(
-        itemCount: 20,
+        itemCount: currency_list.length,
         itemBuilder: (context, index) {
           return Card(
             child: ListTile(
-              title: const Text(
-                "Bitcoin",
-                style: TextStyle(fontWeight: FontWeight.w800),
+              title: Text(
+                currency_list.values.elementAt(index),
+                style: const TextStyle(fontWeight: FontWeight.w800),
               ),
-              trailing: const Text("BTC"),
+              trailing: Text(currency_list.keys.elementAt(index)),
               onTap: () {
                 Navigator.of(context).pushNamed(
                   CryptoInfoScreen.routeName,
-                  // arguments: index.toString(),
+                  arguments: {
+                    "id": currency_list.keys.elementAt(index),
+                    "name": currency_list.values.elementAt(index),
+                  },
                 );
               },
             ),
